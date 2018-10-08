@@ -1,0 +1,132 @@
+@charset "UTF-8";
+.container .row .col-md-9 .first img{
+	width:100%;
+}
+.container .row .col-md-9{
+	background-color: #FFFFFF;
+}
+@media (min-width: 992px){
+	.container .row .four{
+		float:left;
+		background-color: #FFFFFF;
+		width:24%;
+		margin-right:9.5px;
+	}
+}
+@media (max-width: 991px){
+	.container .row .four img{
+	width:100%;
+	}
+	.container .row .four{
+		background-color: #FFFFFF;
+		width:100%;
+		padding-bottom:15px;
+	}
+	.container .row .col-md-9{
+		padding-bottom:15px;
+	}
+}
+.container .row .four .fourContent, .container .row .col-md-9 .second{
+	padding-left : 15px;
+	padding-right : 15px;
+}
+/*****************************************************/
+.main-header > .container > .article_page_header > h1{
+	font-size: 3em !important;
+}
+.article_main_img img{
+	width:100%;
+	max-height:90%;
+}
+.article_header_p{
+	font-size: 1.3em;
+	line-height: 1.8em;
+}
+div.editordate{
+	margin-top: 30px;
+	margin-bottom: 40px;	
+}
+div.editordate p{
+	display:inline;
+}
+.article_content_header{
+	color:black;
+	font-weight:bold;
+}
+.content_text{
+	margin-left:30px;
+	margin-right:10px;
+	
+}
+.content_text a.article_name{
+	color:black;
+	font-size: 2.2em;
+	font-weight:bold;
+	background-image: linear-gradient(to right, rgba(90,175,173,0.5) 0%, rgba(90,175,173,0.5) 100%);
+    background-position: 0 0.84em;
+    background-repeat: repeat-x;
+    background-size: 1px 15px;
+	text-decoration: none;
+}
+.content_text > h5{	
+	margin-top: 0;	
+}
+.xs-icon-size-5 {
+    height: 2rem !important;
+}
+.location{
+	margin-top: 20px;
+	
+}
+.content_text p{
+	font-size: 1.2em;
+	line-height: 1.7em;
+	padding-right: 20px;
+}
+@media (max-width: 991px){
+	.container .row .col-md-4 img{
+		width:100%;
+	}
+	.content_text > h5{
+		margin-top: 10px;
+	}
+}
+.a{
+	margin-top:3px;
+	width:30px;
+	float:left;
+}
+.b{
+	margin-bottom:3px;
+	width:100px;
+	float:left;
+}
+span{
+	color: black;
+	font-weight:bold;
+}
+/***************** about_us **************************/
+.about_us_header h1{
+	font-size: 3.2em !important;	
+}
+.about_us_main{
+	margin-left: 7%;
+	margin-right: 7%;
+}
+.about_us_img img {
+    width: 100%;
+    max-height: 90%;
+}
+.about_us_main .about_us_context{
+	margin-top: 50px;
+	margin-right: 250px;
+}
+.about_us_context p{
+	font-size: 1.4em !important;
+	line-height: 2em;
+}
+/*********************contact us **********************/
+.contact_us_context p{
+	font-size: 1.4em !important;
+	line-height: 2em;
+}
