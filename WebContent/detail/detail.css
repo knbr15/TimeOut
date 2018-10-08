@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	border: 0;
+}
+
+/* element */
+body {
+	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Merriweather Sans', sans-serif;*/
+}
+
+ul li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.flag-group .fa {
+	margin-right: 5px;
+}
+
+/* 중복 적용 class */
+.inline-block {
+	display: inline-block;
+}
+
+.flag-group{
+	font-size: 1.4rem; /*폰트 사이즈 확인*/
+	line-height: 16px;
+	margin-right: 20px;
+	display: block;
+	vertical-align: bottom;
+}
+
+.flag {
+	display: inline-block;
+}
+
+.text-red {
+	color: rgb(239, 71, 38);
+}
+
+.text-blue {
+	color: rgb(92, 196, 237);
+}
+
+.text-gray {
+	color: rgb(226, 226, 226);
+}
+
+/* 단일 class */
+.listing-header {
+	background-color: #fff;
+}
+
+.listing-content {
+	background-color: rgba(220,220,220,0.6);
+}
+
+.listing-title {
+	margin: 20px 0 15px 0;
+	font-weight: 600;
+}
+
+.listing-header-info { /* 반응형 적용 */
+	display: flex;
+	margin-bottom: 15px;
+}
+
+.material-icons.md-14 {
+	font-size: 14px;
+}
+
+.slide-show {
+	padding-top: 15px;
+}
+
+.flag-user-rating {
+	display: flex;
+}
+
+.flag-user-rating .star-rating {
+	margin-right: 12px;
+}
+
+.align-hz {
+	/* 수평 정렬 */
+}
+
+/* listing header media query */
+@media screen and (max-width: 728px){
+	.xs-hide {
+		display: none;
+	}
+}
+
+/* tabs */
+.nav li a{
+	display: block;
+	/*float: left;
+	position: relative;*/
+	/*left: 6px;*/
+	/*width: 32%;*/
+	height: 100px;
+	background-color: #000;
+	color: #fff; 
+	text-decoration: none;
+	font-size: 1.8rem;
+	font-weight: 600;
+	line-height: 60px; 
+	margin-top: 20px;
+	padding-left: 20px;
+}
+
+.nav-pills>li>a {
+  border-radius: 0px;
+}
+
+.nav-pills>li>a, 
+.nav-pills>li>a:focus, 
+.nav-pills>li>a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.nav-pills>li>a:hover {
+  opacity: 0.8;
+}
+
+.nav li a:active {
+	background-color: #fff;
+	color: #000; 
+}
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover {
+  color: #000;
+  background-color: white;
+	opacity: 1;
+}
+
+.nav-justified>li>a {
+  text-align: left;
+}
+
+.listing-tab .flag-group {
+	position: relative;
+	top: -10px;
+}
+
+.nav li a .star-rating {
+	position: relative;
+	bottom: 12px;
+}
+
+.listing-panel {
+	clear: both;
+	background-color: #fff;
+	padding: 30px;
+	margin-bottom: 20px;
+}
+
+.panel-content {
+	/*display: none;*/
+	padding: 30px;
+	text-align: justify;
+}
+/*
+.panel-content.selected {
+	display: inherit;
+}
+*/
+#timeoutSays p {
+	margin-bottom: 20px;
+	font-size: 1.6rem;
+}
+
+#timeoutSays footer p {
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+/* details */
+.box-button {
+	display: inline-block;
+	margin-right: 10px;
+	padding: 6px 10px;
+	border: 1px solid gray;
+	text-decoration: none;
+	background-color: #fff;
+	color: #000;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+.box-button:active, 
+.box-button:visited,
+.box-button:focus {
+	text-decoration: none;
+	background-color: #fff;
+	color: #000;
+}
+
+.box-button:hover {
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* comment */
+.review-button {
+	background-color: #f0f0f0;
+  border: 1px solid #a1a1a1;
+  cursor: pointer;
+  display: inline-block;
+	border-radius: 3px;
+	color: #666;
+  float: right;
+  margin-left: 2px;
+  padding: 12px 18px 12px 14px;
+	position: relative;
+	top: -35px;
+}
+
+.submit-button {
+	border: 1px solid gray;
+	background-color: #fff;
+	color: #000;
+}
+
+.submit-button:hover {
+	background-color: #000;
+	color: #fff;
+	cursor: pointer;
+}
+
+#review {
+	position: relative;
+	top: 30px;
+}
+
+/* rating-stars */
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+  position: absolute;
+  right: 0;
+  
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+  display:inline-block; 
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size:1.5em; /* Change the size of the stars */
+  color:#ccc; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color:rgba(92, 196, 237,0.4);
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color:rgb(92, 196, 237);
+}
+
+.comment-star-rating {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 767px) {
+	/* tab 메뉴 안보이게 설정 */
+	
+}
+
+@media screen and (max-width: 727px) {
+	/* flag 깨지지 않게 설정 */
+	
+}
+
+@media screen and (max-width: 375px) {
+	/* 모바일 화면에서 detail 테이블 깨지지 않게 */
+	
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Header</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="modal.css">
+</head>
+<body>
+<div class="body-container">
+ 
+  <div class="navbar" id="topnav">
+    <!-- 로고 이미지 -->
+    <a href="index1.html" class="navbar-brand"><img src="http://ideologyentertainment.com/ideology/wp-content/uploads/2017/07/timeout-logo.png" alt="logo"></a>
+    <!-- 모바일 상태에서의 메뉴 아이콘 -->
+    <a href="javascript:void(0);" class="navbar-toggle"><i class="fa fa-bars"></i></a>
+    <!-- javascript:void(0); a태그의 디자인성은 살리면서 기본적인 링크 이동의 기능을 없애준다 -->
+    <!-- 부트스트랩 : <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">-->
+    
+    <!-- nav 메뉴 (로고 옆에 정렬) --> 
+    <div class="nav" id="myNav">
+      <a href="#">City Guide</a>
+      <a href="#">Foods</a>
+      <a href="#">Bars</a>
+      <a href="#">Culture</a>
+      <a href="#">Hotels</a>
+      <a href="#">News</a>
+    </div>
+    
+    <!-- 로그인 & 검색 버튼 (우측 정렬) -->
+    <div class="navbar-right">
+     	<a href="#" onclick="openSignupModal()">CREATE ACCOUNT</a>
+      <a href="#" onclick="openLoginModal()">SIGN IN</a>
+      <input type="text" class="form-control" id="search" placeholder="Search.." name="search">
+      <a href="#" class="btn" onclick=""><i class="fa fa-search"></i></a>
+    </div>
+    
+    <!-- 검색란 (우측 정렬) 
+    <form class="navbar-form navbar-right" role="search" action="/action_page.jsp">
+      <input type="text" class="form-control" placeholder="Search.." name="search"/>
+      <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+	</form>-->
+  </div> <!-- topnav 끝 -->
+  
+  <!-- login modal -->
+    <div id="login" class="modal">
+       <form class="modal-content" action="login.do">
+        <div class="title">      
+          <!--<span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">&times;</span>-->
+          <p>Sign In</p>
+        </div>
+        <!-- social login -->
+        <div class="social">
+          <a href="#" >
+            <button type="button" class="fb btn"><i class="fa fa-facebook fa-fw"></i>Sign in with Facebook</button>
+          </a>
+        	<a href="#">
+          	<button type="button" class="twitter btn"><i class="fa fa-twitter fa-fw"></i>Sign in with Twitter</button>
+        	</a>
+        	<a href="#">
+          	<button type="button" class="google btn"><i class="fa fa-google fa-fw"></i>Sign in with Google+</button>
+        	</a>
+        </div>
+        <!-- email login -->
+        <div class="hl">
+          Or sign in with Email:
+        </div>
+        <div class="input-container">
+          <input type="email" placeholder="Your email address" name="email" required>
+          <input type="password" placeholder="Your password" name="psw" required>
+          <label class="extra">
+            <input type="checkbox" checked name="remember"> Remember me
+          </label>
+          <span class="forgot"><a href="#forgot" class="text-link">Forgot?</a></span>
+          <button type="submit" class="submit">SIGN IN WITH EMAIL</button>
+        </div>
+        <div class="toggle">
+          Don't yet have a Time Out account? <a href="#" id="join" onclick="linkToSnsSignupModal()" class="text-link">Join here</a>
+        </div>
+      </form>
+    </div><!-- login modal 끝 -->
+  
+  <!-- sns sign up modal -->
+    <div id="snsSignup" class="modal">
+       <form class="modal-content">
+        <div class="title">      
+          <!--<span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">&times;</span>-->
+          <p>Create an Account</p>
+        </div>
+        <!-- social sign up -->
+        <div class="social">
+          <a href="#" >
+            <button type="button" class="fb btn"><i class="fa fa-facebook fa-fw"></i>Join with Facebook</button>
+          </a>
+        	<a href="#">
+          	<button type="button" class="twitter btn"><i class="fa fa-twitter fa-fw"></i>Join with Twitter</button>
+        	</a>
+        	<a href="#">
+						<button type="button" class="google btn"><i class="fa fa-google fa-fw"></i>Join with Google+</button>
+        	</a>
+        	<a href="#">
+          	<button type="button" class="email btn" onclick="linkToSignupModal()"><i class="fa fa-envelope fa-fw"></i>Join with Email</button>
+        	</a>
+        </div>
+        <div class="toggle">
+          Already have a Time Out account? <a href="#" onclick="linkToLoginModal1()" style="width:auto" class="text-link">Log In</a>
+        </div>
+      </form>
+    </div><!-- sns sign up modal 끝 -->
+    
+  <!-- email sign up modal -->
+    <div id="signup" class="modal">
+       <form class="modal-content" action="signup.do">
+        <div class="title">
+          <!--<span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">&times;</span>-->
+          <a href="#" id="before"><span class="fa fa-angle-left"></span></a>
+          <p>Almost there</p>
+        </div>
+        <div class="input-container">
+          <input type="text" placeholder="Your name" name="name" required>
+          <input type="email" placeholder="Your email address" name="email" required>
+          <input type="password" placeholder="Enter your password" name="psw" required>
+          <input type="password" placeholder="Repeat Your password" name="repsw" required>
+          <label class="consent">
+            <input type="checkbox" checked name="consent"> 
+            <span> I have read and accept the <a href="#" target="_blank" class="text-link">Terms and Conditions</a> and <a href="#" target="_blank" class="text-link">Privacy Policy</a> of Time Out, including opt-in to marketing communications</span>
+            <span class="error-text">You must agree to our terms of use</span>
+          </label> 
+          <button type="submit" class="submit">SIGN UP WITH EMAIL</button>
+        </div>
+        <div class="toggle">
+          Already have a Time Out account? <a href="#" class="text-link login-link">Log In</a>
+          <!--Already have a Time Out account? <a href="#" onclick="document.getElementById('login').style.display='block'" style="width:auto">Log In</a>-->
+        </div>
+      </form>
+    </div><!-- email sign up modal 끝 -->
+    
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="modal.js"></script>
+<script>
+  $(function(){
+		// 모바일 상태에서의 메뉴 아이콘 toggle
+    $('.navbar-toggle').on('click',function(){
+      $('.nav').toggleClass('responsive');
+    })
+  })
+
+</script>
+</body>
+</html>

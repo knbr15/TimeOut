@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>admin page</title>
+
+<link href="../../boot/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="../assets/css/preload.css" rel="stylesheet">
+<link href="../assets/css/vendors.css" rel="stylesheet">
+<link rel="stylesheet" href="adminList.css">
+<style>
+	.searchForm {
+		
+	}	
+</style>
+</head>
+
+<body><!-- 목록보기 : 검색 기능 -->
+	<div class="container">
+		<table class="table">
+			<tr>
+				<th>No.</th>
+				<th>Category</th>
+				<th>Title</th>
+				<th>Writer</th>
+				<th>Date</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+		</table>
+		
+		<!-- 검색 기능 추가 : 작성자, 제목, 카테고리별 -->
+		<form class="searchForm">
+			<select>
+				<option>title</option>
+				<option>author</option>
+				<option>content</option>
+				<option>title+content</option>
+			</select>
+			<input type="text" placeholder="Search..">
+			<button type="button" class="btn-style" data-action="search">Search</button>
+		</form>
+	</div>
+
+</body>
+</html>

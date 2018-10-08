@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>admin page</title>
+
+<link href="../../boot/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="../assets/css/preload.css" rel="stylesheet">
+<link href="../assets/css/vendors.css" rel="stylesheet">
+<link rel="stylesheet" href="adminWrite.css">
+<style>
+	.control-label, .form-control {
+		margin: 8px 0;	
+	}
+	.btns{
+		float: right;
+		margin: 14px 14px 20px 0;
+	}
+	.btns::after {
+		clear: both;
+	}
+	.btn-style {
+		width: 120px;
+		padding: 6px;
+		border-radius: 3px;
+		border: none;
+		background-color: #000;
+		color: #fff;	
+		cursor: pointer;
+	}
+	.btn-style:hover {		
+		border: 1px solid #000;
+		background-color: #fff;
+		color: #000;	
+	}
+</style>
+</head>
+
+<body><!-- 신규 작성 : 카테고리 선택 -->
+	<div class="container">
+		<form class="form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="category" >Category</label>
+			<div class="col-sm-10">
+				<select class="form-control">
+					<option selected disabled>Select a category</option>
+					<option>CITY GUIDE</option>
+					<option>RESTAURANTS</option>
+					<option>BARS&CAFES</option>
+					<option>CULTURE</option>
+					<option>HOTELS</option>
+					<option>NEWS</option>
+				</select>
+			</div>
+			<label class="col-sm-2 control-label" for="title">Title</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="title" />
+			</div>
+			<label class="col-sm-2 control-label" for="content">Content</label>
+			<div class="col-sm-10">
+				<textarea class="form-control" rows="30" name="content"></textarea>
+			</div>	
+			<label class="col-sm-2 control-label" for="image">attach files</label>
+      <div class="col-sm-10">
+      	<input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg" />
+      	<input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg" />
+      	<input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg" />
+			</div>
+      <!-- 다시작성, 완료 버튼 -->
+			<div class="btns">
+				<button type="reset" class="btn-style" data-action="reset">Clear All</button>
+				<button type="submit" class="btn-style" data-action="submit">Complete</button>
+			</div>
+		</div>
+		</form>
+	</div>
+
+</body>
+</html>
